@@ -1,4 +1,4 @@
-package io.github.yunato.judotimer.ui
+package io.github.yunato.judotimer.ui.activity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
