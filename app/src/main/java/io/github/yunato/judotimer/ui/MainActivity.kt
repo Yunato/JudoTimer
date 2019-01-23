@@ -1,9 +1,10 @@
-package io.github.yunato.judotimer
+package io.github.yunato.judotimer.ui
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Button
+import io.github.yunato.judotimer.R
 
 class MainActivity : AppCompatActivity() {
     val TAG: String = "MainActivity"
