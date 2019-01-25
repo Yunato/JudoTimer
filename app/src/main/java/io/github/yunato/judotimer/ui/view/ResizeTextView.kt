@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.widget.TextView
 
-class ResizeTextView : TextView{
+class ResizeTextView : TextView {
 
     constructor(context: Context?) : super(context)
 
