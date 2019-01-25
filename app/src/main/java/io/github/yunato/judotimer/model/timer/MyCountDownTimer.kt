@@ -4,27 +4,26 @@ import android.os.CountDownTimer
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MyCountDownTimer : CountDownTimer {
+class MyCountDownTimer(millisUntilFinished: Long, countDownInterval: Long)
+        : CountDownTimer(millisUntilFinished, countDownInterval) {
+
     private var mListener: OnProgressListener? = null
 
     private val dataFormat: SimpleDateFormat = SimpleDateFormat("mm:ss", Locale.JAPAN)
-
-    constructor(millisInFuture: Long,
-                countDownInterval: Long) : super(millisInFuture, countDownInterval)
 
     fun setOnProgressListener (listener: OnProgressListener){
         mListener = listener
     }
 
     override fun onFinish() {
-        mListener?.onProgress(dataFormat.format(0))
+        mListener?.onProgress(0, dataFormat.format(0))
     }
 
     override fun onTick(millisUntilFinished: Long) {
-        mListener?.onProgress(dataFormat.format(millisUntilFinished))
+        mListener?.onProgress(millisUntilFinished, dataFormat.format(millisUntilFinished))
     }
 
     interface OnProgressListener{
-        fun onProgress(timeText: String)
+        fun onProgress(millisUntilFinished: Long, timeText: String)
     }
 }
