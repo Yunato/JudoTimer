@@ -1,6 +1,10 @@
 package io.github.yunato.judotimer.ui.activity
 
-class TimerActivity : android.support.v7.app.AppCompatActivity() {
+import io.github.yunato.judotimer.R
+import io.github.yunato.judotimer.ui.fragment.TimerFragment
+
+class TimerActivity : android.support.v7.app.AppCompatActivity(),
+        TimerFragment.OnFragmentInteractionListener {
 
     companion object {
         fun intent(context: android.content.Context): android.content.Intent =
@@ -10,6 +14,10 @@ class TimerActivity : android.support.v7.app.AppCompatActivity() {
     override fun onCreate(savedInstanceState: android.os.Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(io.github.yunato.judotimer.R.layout.activity_timer)
+
+        val transition = fragmentManager.beginTransaction()
+        val fragment = TimerFragment.newInstance()
+        transition.replace(R.id.activity_timer, fragment).commit()
     }
 
     override fun onResume() {
@@ -25,4 +33,6 @@ class TimerActivity : android.support.v7.app.AppCompatActivity() {
                         android.view.View.SYSTEM_UI_FLAG_LOW_PROFILE or
                         android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
     }
+
+    override fun onFragmentInteraction() {}
 }
