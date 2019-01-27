@@ -40,7 +40,8 @@
             android:layout_height="match_parent"
             android:layout_weight="9">
 
-            <include layout="@layout/part_two_players"/>
+            <include layout="@layout/part_two_players"
+                android:id="@+id/input_player_info_layout"/>
         </LinearLayout>
     </LinearLayout>
 
