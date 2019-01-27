@@ -7,8 +7,8 @@
     <string name="gender_text_view">男子</string>
     <string name="grade_hint_text_view">階級</string>
     <string name="grade_text_view">60kg級</string>
-    <string name="rank_hint_text_view">1回戦</string>
-    <string name="rank_text_view">性別</string>
+    <string name="rank_hint_text_view">試合情報</string>
+    <string name="rank_text_view">1回戦</string>
     <string name="num_start_text_view">第</string>
     <string name="num_end_text_view">試合</string>
 

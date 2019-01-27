@@ -8,7 +8,10 @@
 
     <LinearLayout
         style="@style/linear_layout_mwv_style"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:background="@drawable/shape_input_group"
+        android:layout_marginTop="@dimen/linear_layout_game_info_margin"
+        android:padding="10dp">
 
         <android.support.design.widget.TextInputLayout
             style="@style/widget_mw_style"
@@ -19,6 +22,9 @@
             <android.support.design.widget.TextInputEditText
                 style="@style/text_view_style"
                 android:id="@+id/name_edit_text"
+                android:paddingTop="10dp"
+                android:background="@color/colorPrimaryDimLight"
+                android:textColor="@color/colorPrimaryLight"
                 android:hint="@string/name_hint_edit_text"/>
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
@@ -26,6 +32,9 @@
     <LinearLayout
         style="@style/linear_layout_mwh_style"
         android:layout_weight="1"
+        android:background="@drawable/shape_input_group"
+        android:layout_marginTop="@dimen/linear_layout_game_info_margin"
+        android:padding="10dp"
         android:baselineAligned="false">
 
         <android.support.design.widget.TextInputLayout
@@ -40,6 +49,9 @@
                 android:id="@+id/select_gender_text_view"
                 android:enabled="false"
                 android:focusable="false"
+                android:paddingTop="10dp"
+                android:background="@color/colorPrimaryDimLight"
+                android:textColor="@color/colorPrimaryLight"
                 android:hint="@string/gender_hint_text_view"
                 android:text="@string/gender_text_view"/>
         </android.support.design.widget.TextInputLayout>
@@ -56,6 +68,9 @@
                 android:id="@+id/select_grade_text_view"
                 android:enabled="false"
                 android:focusable="false"
+                android:paddingTop="10dp"
+                android:background="@color/colorPrimaryDimLight"
+                android:textColor="@color/colorPrimaryLight"
                 android:hint="@string/grade_hint_text_view"
                 android:text="@string/grade_text_view"/>
         </android.support.design.widget.TextInputLayout>
@@ -64,12 +79,15 @@
     <LinearLayout
         style="@style/linear_layout_mwh_style"
         android:layout_weight="1"
+        android:background="@drawable/shape_input_group"
+        android:layout_marginTop="@dimen/linear_layout_game_info_margin"
+        android:padding="10dp"
         android:baselineAligned="false">
 
         <android.support.design.widget.TextInputLayout
             style="@style/widget_mw_style"
             android:id="@+id/rank_text_input_layout"
-            android:layout_weight="3"
+            android:layout_weight="1"
             app:hintEnabled="true"
             app:hintAnimationEnabled="true">
 
@@ -78,13 +96,16 @@
                 android:id="@+id/select_rank_text_view"
                 android:enabled="false"
                 android:focusable="false"
+                android:paddingTop="10dp"
+                android:background="@color/colorPrimaryDimLight"
+                android:textColor="@color/colorPrimaryLight"
                 android:hint="@string/rank_hint_text_view"
                 android:text="@string/rank_text_view"/>
         </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
             style="@style/linear_layout_mwh_style"
-            android:layout_weight="4">
+            android:layout_weight="1">
 
             <android.support.design.widget.TextInputLayout
                 style="@style/widget_wm_style"
@@ -97,6 +118,9 @@
                     android:layout_width="wrap_content"
                     android:enabled="false"
                     android:focusable="false"
+                    android:paddingTop="10dp"
+                    android:background="@color/colorPrimaryDimLight"
+                    android:textColor="@color/colorPrimaryLight"
                     android:text="@string/num_start_text_view"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -111,7 +135,10 @@
                     android:id="@+id/num_edit_text"
                     android:inputType="number"
                     android:gravity="center"
-                    android:ems="2"/>
+                    android:ems="2"
+                    android:paddingTop="10dp"
+                    android:background="@color/colorPrimaryDimLight"
+                    android:textColor="@color/colorPrimaryLight"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -125,6 +152,9 @@
                     android:layout_width="wrap_content"
                     android:enabled="false"
                     android:focusable="false"
+                    android:paddingTop="10dp"
+                    android:background="@color/colorPrimaryDimLight"
+                    android:textColor="@color/colorPrimaryLight"
                     android:text="@string/num_end_text_view"/>
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
