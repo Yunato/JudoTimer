@@ -11,6 +11,8 @@
     <string name="rank_text_view">1回戦</string>
     <string name="num_start_text_view">第</string>
     <string name="num_end_text_view">試合</string>
+    <string name="player_belong_hint_edit_text">所属</string>
+    <string name="player_name_hint_edit_text">名前</string>
 
 
 </resources>

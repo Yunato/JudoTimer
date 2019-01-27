@@ -2,8 +2,8 @@
 <LinearLayout
     style="@style/linear_layout_mmv_style"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:baselineAligned="false"
-    android:paddingTop="10dp">
+    android:paddingTop="10dp"
+    android:orientation="vertical">
 
     <LinearLayout
         style="@style/linear_layout_mmv_style"
@@ -19,7 +19,7 @@
         android:layout_weight="1">
 
         <include layout="@layout/part_input_player_info"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"/>
     </LinearLayout>
 </LinearLayout>

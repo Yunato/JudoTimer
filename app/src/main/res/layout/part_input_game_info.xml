@@ -25,7 +25,7 @@
             <android.support.design.widget.TextInputEditText
                 style="@style/text_view_style"
                 android:id="@+id/name_edit_text"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:background="@color/colorPrimaryDimLight"
                 android:textColor="@color/colorPrimaryLight"
                 android:hint="@string/name_hint_edit_text"/>
@@ -52,7 +52,7 @@
                 android:id="@+id/select_gender_text_view"
                 android:enabled="false"
                 android:focusable="false"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:background="@color/colorPrimaryDimLight"
                 android:textColor="@color/colorPrimaryLight"
                 android:hint="@string/gender_hint_text_view"
@@ -71,7 +71,7 @@
                 android:id="@+id/select_grade_text_view"
                 android:enabled="false"
                 android:focusable="false"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:background="@color/colorPrimaryDimLight"
                 android:textColor="@color/colorPrimaryLight"
                 android:hint="@string/grade_hint_text_view"
@@ -99,7 +99,7 @@
                 android:id="@+id/select_rank_text_view"
                 android:enabled="false"
                 android:focusable="false"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:background="@color/colorPrimaryDimLight"
                 android:textColor="@color/colorPrimaryLight"
                 android:hint="@string/rank_hint_text_view"
@@ -121,7 +121,7 @@
                     android:layout_width="wrap_content"
                     android:enabled="false"
                     android:focusable="false"
-                    android:paddingTop="10dp"
+                    android:paddingTop="5dp"
                     android:background="@color/colorPrimaryDimLight"
                     android:textColor="@color/colorPrimaryLight"
                     android:text="@string/num_start_text_view"/>
@@ -139,7 +139,7 @@
                     android:inputType="number"
                     android:gravity="center"
                     android:ems="2"
-                    android:paddingTop="10dp"
+                    android:paddingTop="5dp"
                     android:background="@color/colorPrimaryDimLight"
                     android:textColor="@color/colorPrimaryLight"/>
             </android.support.design.widget.TextInputLayout>
@@ -155,7 +155,7 @@
                     android:layout_width="wrap_content"
                     android:enabled="false"
                     android:focusable="false"
-                    android:paddingTop="10dp"
+                    android:paddingTop="5dp"
                     android:background="@color/colorPrimaryDimLight"
                     android:textColor="@color/colorPrimaryLight"
                     android:text="@string/num_end_text_view"/>
