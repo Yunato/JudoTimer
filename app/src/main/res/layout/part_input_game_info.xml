@@ -3,7 +3,10 @@
     style="@style/linear_layout_mmv_style"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="@dimen/linear_layout_game_info_margin"
+    android:layout_marginTop="0dp"
+    android:layout_marginStart="@dimen/linear_layout_game_info_margin"
+    android:layout_marginEnd="@dimen/linear_layout_game_info_margin"
+    android:layout_marginBottom="@dimen/linear_layout_game_info_margin"
     android:baselineAligned="false">
 
     <LinearLayout
