@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    style="@style/linear_layout_mmv_style"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:baselineAligned="false"
     android:paddingTop="10dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/linear_layout_mmv_style"
         android:layout_weight="1">
 
         <include layout="@layout/part_input_player_info"
@@ -17,12 +15,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/linear_layout_mmv_style"
         android:layout_weight="1">
 
         <include layout="@layout/part_input_player_info"
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 </LinearLayout>

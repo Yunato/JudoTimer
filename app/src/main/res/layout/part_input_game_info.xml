@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/linear_layout_mmv_style"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/linear_layout_game_info_margin"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        style="@style/linear_layout_mwv_style"
+        android:layout_weight="1">
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/widget_mw_style"
+            android:id="@+id/name_text_input_layout"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                style="@style/text_view_style"
+                android:id="@+id/name_edit_text"
+                android:hint="@string/name_hint_edit_text"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_layout_mwh_style"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/widget_mw_style"
+            android:id="@+id/gender_text_input_layout"
+            android:layout_weight="2"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                style="@style/text_view_style"
+                android:id="@+id/select_gender_text_view"
+                android:enabled="false"
+                android:focusable="false"
+                android:hint="@string/gender_hint_text_view"
+                android:text="@string/gender_text_view"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/widget_mw_style"
+            android:id="@+id/grade_text_input_layout"
+            android:layout_weight="1"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                style="@style/text_view_style"
+                android:id="@+id/select_grade_text_view"
+                android:enabled="false"
+                android:focusable="false"
+                android:hint="@string/grade_hint_text_view"
+                android:text="@string/grade_text_view"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_layout_mwh_style"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/widget_mw_style"
+            android:id="@+id/rank_text_input_layout"
+            android:layout_weight="3"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                style="@style/text_view_style"
+                android:id="@+id/select_rank_text_view"
+                android:enabled="false"
+                android:focusable="false"
+                android:hint="@string/rank_hint_text_view"
+                android:text="@string/rank_text_view"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            style="@style/linear_layout_mwh_style"
+            android:layout_weight="4">
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/widget_wm_style"
+                app:hintEnabled="true"
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    style="@style/text_view_style"
+                    android:id="@+id/label_num_start_text_view"
+                    android:layout_width="wrap_content"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="@string/num_start_text_view"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/widget_wm_style"
+                android:id="@+id/num_text_input_layout"
+                app:hintEnabled="true"
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    style="@style/text_view_style"
+                    android:id="@+id/num_edit_text"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:ems="2"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/widget_wm_style"
+                app:hintEnabled="true"
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    style="@style/text_view_style"
+                    android:id="@+id/label_num_end_text_view"
+                    android:layout_width="wrap_content"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="@string/num_end_text_view"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
