@@ -65,11 +65,35 @@ class InputGameInfoFragment : Fragment() {
                         .show()
             }
 
+            val selectPartView = view.findViewById(R.id.input_game_info_layout)
+                    .findViewById(R.id.select_part_text_view) as TextInputEditText
+            selectPartView.setOnClickListener {
+                val items: Array<String> = activity.resources.getStringArray(R.array.part)
+                AlertDialog.Builder(activity)
+                        .setTitle(activity.getString(R.string.part_title))
+                        .setItems(items, { _, which ->
+                            selectPartView.setText(items[which])
+                        })
+                        .show()
+            }
+
             val selectGradeView = view.findViewById(R.id.input_game_info_layout)
                     .findViewById(R.id.select_grade_text_view) as TextInputEditText
             selectGradeView.setOnClickListener {
-                val resourceId = if (activity.getString(R.string.gender_man).
-                        contentEquals(selectGenderView.text)) R.array.man_grade else R.array.woman_grade
+                val pair = Pair(selectGenderView.text.toString(), selectPartView.text.toString())
+                val resourceId = when(pair){
+                    Pair(activity.getString(R.string.gender_man), activity.getString(R.string.part_es)) -> R.array.man_grade_es
+                    Pair(activity.getString(R.string.gender_man), activity.getString(R.string.part_jhs)) -> R.array.man_grade_jhs
+                    Pair(activity.getString(R.string.gender_man), activity.getString(R.string.part_hs)) -> R.array.man_grade_hs
+                    Pair(activity.getString(R.string.gender_man), activity.getString(R.string.part_univ)) -> R.array.man_grade
+                    Pair(activity.getString(R.string.gender_man), activity.getString(R.string.part_general)) -> R.array.man_grade
+                    Pair(activity.getString(R.string.gender_woman), activity.getString(R.string.part_es)) -> R.array.woman_grade_es
+                    Pair(activity.getString(R.string.gender_woman), activity.getString(R.string.part_jhs)) -> R.array.woman_grade_jhs
+                    Pair(activity.getString(R.string.gender_woman), activity.getString(R.string.part_hs)) -> R.array.woman_grade_hs
+                    Pair(activity.getString(R.string.gender_woman), activity.getString(R.string.part_univ)) -> R.array.woman_grade
+                    Pair(activity.getString(R.string.gender_woman), activity.getString(R.string.part_general)) -> R.array.woman_grade
+                    else ->{ R.string.grade_other }
+                }
                 val items: Array<String> = activity.resources.getStringArray(resourceId)
                 AlertDialog.Builder(activity)
                         .setTitle(activity.getString(R.string.grade_title))

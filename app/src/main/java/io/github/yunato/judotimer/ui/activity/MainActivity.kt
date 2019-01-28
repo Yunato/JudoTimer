@@ -15,17 +15,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if(resources.getBoolean(R.bool.portrait_only)){
+        if (resources.getBoolean(R.bool.portrait_only)) {
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-        }else{
+        } else {
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         }
 
         val transition = fragmentManager.beginTransaction()
         val fragment = InputGameInfoFragment.newInstance()
         fragment.setOnStartListener(
-                object: InputGameInfoFragment.OnStartListener{
-                    override fun onStart(game: Game, first: Player, second: Player){
+                object : InputGameInfoFragment.OnStartListener {
+                    override fun onStart(game: Game, first: Player, second: Player) {
                         TimerActivity.intent(applicationContext).let { startActivity(it) }
                     }
                 }
