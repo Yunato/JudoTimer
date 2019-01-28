@@ -23,6 +23,8 @@ class InputGameInfoFragment : Fragment() {
     }
 
     var mListener: OnStartListener? = null
+    var mGenderState: String = ""
+    var mGradeItems: Array<String> = arrayOf("")
 
     val game: Game = Game(0, "", "", "", "")
     val firstPlayer: Player = Player("", "")
@@ -44,42 +46,20 @@ class InputGameInfoFragment : Fragment() {
             val firstPlayerLayout = view.findViewById(R.id.input_player_info_layout)
                     .findViewById(R.id.first_input_layout)
                     .findViewById(R.id.color_layout)
-            firstPlayerLayout.setBackgroundColor(
-                    ContextCompat.getColor(activity, R.color.colorPlayerRed))
-
             val secondPlayerLayout = view.findViewById(R.id.input_player_info_layout)
                     .findViewById(R.id.second_input_layout)
                     .findViewById(R.id.color_layout)
-            secondPlayerLayout.setBackgroundColor(
-                    ContextCompat.getColor(activity, R.color.colorPlayerWhite))
-
             val selectGenderView = view.findViewById(R.id.input_game_info_layout)
                     .findViewById(R.id.select_gender_text_view) as TextInputEditText
-            selectGenderView.setOnClickListener {
-                val items: Array<String> = activity.resources.getStringArray(R.array.gender)
-                AlertDialog.Builder(activity)
-                        .setTitle(activity.getString(R.string.gender_title))
-                        .setItems(items, { _, which ->
-                            selectGenderView.setText(items[which])
-                        })
-                        .show()
-            }
-
             val selectPartView = view.findViewById(R.id.input_game_info_layout)
                     .findViewById(R.id.select_part_text_view) as TextInputEditText
-            selectPartView.setOnClickListener {
-                val items: Array<String> = activity.resources.getStringArray(R.array.part)
-                AlertDialog.Builder(activity)
-                        .setTitle(activity.getString(R.string.part_title))
-                        .setItems(items, { _, which ->
-                            selectPartView.setText(items[which])
-                        })
-                        .show()
-            }
-
             val selectGradeView = view.findViewById(R.id.input_game_info_layout)
                     .findViewById(R.id.select_grade_text_view) as TextInputEditText
-            selectGradeView.setOnClickListener {
+            val selectRankView = view.findViewById(R.id.input_game_info_layout)
+                    .findViewById(R.id.select_rank_text_view) as TextInputEditText
+            val faButton = view.findViewById(R.id.fab) as FloatingActionButton
+
+            val switchGradeItems = {
                 val pair = Pair(selectGenderView.text.toString(), selectPartView.text.toString())
                 val resourceId = when(pair){
                     Pair(activity.getString(R.string.gender_man), activity.getString(R.string.part_es)) -> R.array.man_grade_es
@@ -94,7 +74,44 @@ class InputGameInfoFragment : Fragment() {
                     Pair(activity.getString(R.string.gender_woman), activity.getString(R.string.part_general)) -> R.array.woman_grade
                     else ->{ R.string.grade_other }
                 }
-                val items: Array<String> = activity.resources.getStringArray(resourceId)
+                mGradeItems = activity.resources.getStringArray(resourceId)
+            }
+
+            firstPlayerLayout.setBackgroundColor(
+                    ContextCompat.getColor(activity, R.color.colorPlayerRed))
+            secondPlayerLayout.setBackgroundColor(
+                    ContextCompat.getColor(activity, R.color.colorPlayerWhite))
+            selectGenderView.setOnClickListener {
+                val items: Array<String> = activity.resources.getStringArray(R.array.gender)
+                AlertDialog.Builder(activity)
+                        .setTitle(activity.getString(R.string.gender_title))
+                        .setItems(items, { _, which ->
+                            selectGenderView.setText(items[which])
+                            if(!mGenderState.contentEquals(selectGenderView.text)){
+                                mGenderState = selectGenderView.text.toString()
+                                switchGradeItems()
+                                if(!mGradeItems.contains(selectGradeView.text.toString())){
+                                    selectGradeView.setText("")
+                                }
+                            }
+                        })
+                        .show()
+            }
+            selectPartView.setOnClickListener {
+                val items: Array<String> = activity.resources.getStringArray(R.array.part)
+                AlertDialog.Builder(activity)
+                        .setTitle(activity.getString(R.string.part_title))
+                        .setItems(items, { _, which ->
+                            selectPartView.setText(items[which])
+                            switchGradeItems()
+                            if(!mGradeItems.contains(selectGradeView.text.toString())){
+                                selectGradeView.setText("")
+                            }
+                        })
+                        .show()
+            }
+            selectGradeView.setOnClickListener {
+                val items = mGradeItems
                 AlertDialog.Builder(activity)
                         .setTitle(activity.getString(R.string.grade_title))
                         .setItems(items, { _, which ->
@@ -102,9 +119,6 @@ class InputGameInfoFragment : Fragment() {
                         })
                         .show()
             }
-
-            val selectRankView = view.findViewById(R.id.input_game_info_layout)
-                    .findViewById(R.id.select_rank_text_view) as TextInputEditText
             selectRankView.setOnClickListener {
                 val items: Array<String> = activity.resources.getStringArray(R.array.rank)
                 AlertDialog.Builder(activity)
@@ -114,14 +128,15 @@ class InputGameInfoFragment : Fragment() {
                         })
                         .show()
             }
-
-            val faButton = view.findViewById(R.id.fab) as FloatingActionButton
             faButton.setOnClickListener {
                 mListener?.onStart(
                         Game(0, "", "", "", ""),
                         Player("", ""),
                         Player("", ""))
             }
+
+            mGenderState = activity.getString(R.string.gender_man)
+            switchGradeItems()
         }
     }
 
