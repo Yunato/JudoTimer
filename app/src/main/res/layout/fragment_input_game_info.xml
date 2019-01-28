@@ -31,7 +31,8 @@
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                     app:layout_collapseMode="pin"/>
 
-                <include layout="@layout/part_input_game_info"/>
+                <include layout="@layout/part_input_game_info"
+                         android:id="@+id/input_game_info_layout"/>
             </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
 
