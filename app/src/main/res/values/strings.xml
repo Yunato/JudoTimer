@@ -3,61 +3,164 @@
 
     <!-- Setup UI -->
     <string name="name_hint_edit_text">大会名</string>
-    <string name="gender_title">性別</string>
-    <string name="gender_man">男子</string>
-    <string name="gender_woman">女子</string>
-    <string name="grade_title">階級</string>
-    <string name="grade_text_view">60kg級</string>
-    <string name="rank_title">試合情報</string>
-    <string name="rank_text_view">1回戦</string>
-    <string name="num_start_text_view">第</string>
-    <string name="num_end_text_view">試合</string>
     <string name="player_belong_hint_edit_text">所属</string>
     <string name="player_name_hint_edit_text">名前</string>
 
     <!-- Gender -->
+    <string name="gender_title">性別</string>
+    <string name="gender_man">男子</string>
+    <string name="gender_woman">女子</string>
     <string-array name="gender">
         <item>@string/gender_man</item>
         <item>@string/gender_woman</item>
     </string-array>
 
-    <!-- Grade -->
-    <string-array name="man_grade">
-        <item>55kg級</item>
-        <item>60kg級</item>
-        <item>66kg級</item>
-        <item>73kg級</item>
-        <item>81kg級</item>
-        <item>90kg級</item>
-        <item>90kg超級</item>
-        <item>100kg級</item>
-        <item>100kg超級</item>
-        <item>その他</item>
+    <!-- Part -->
+    <string name="part_title">部</string>
+    <string name="part_es">小学生</string>
+    <string name="part_jhs">中学生</string>
+    <string name="part_hs">高校生</string>
+    <string name="part_univ">大学生</string>
+    <string name="part_general">一般</string>
+    <string-array name="part">
+        <item>@string/part_es</item>
+        <item>@string/part_jhs</item>
+        <item>@string/part_hs</item>
+        <item>@string/part_univ</item>
+        <item>@string/part_general</item>
     </string-array>
 
+    <!-- Grade -->
+    <string name="grade_title">階級</string>
+    <string name="grade_45kg">45kg級</string>
+    <string name="grade_over_45kg">45kg超級</string>
+    <string name="grade_50kg">50kg級</string>
+    <string name="grade_over_50kg">50kg超級</string>
+    <string name="grade_55kg">55kg級</string>
+    <string name="grade_60kg">60kg級</string>
+    <string name="grade_66kg">66kg級</string>
+    <string name="grade_73kg">73kg級</string>
+    <string name="grade_81kg">81kg級</string>
+    <string name="grade_90kg">90kg級</string>
+    <string name="grade_over_90kg">90kg超級</string>
+    <string name="grade_100kg">100kg級</string>
+    <string name="grade_over_100kg">100kg超級</string>
+    <string name="grade_other">その他</string>
+    <string-array name="man_grade_es">
+        <item>@string/grade_45kg</item>
+        <item>@string/grade_over_45kg</item>
+        <item>@string/grade_50kg</item>
+        <item>@string/grade_over_50kg</item>
+        <item>@string/grade_other</item>
+    </string-array>
+    <string-array name="man_grade_jhs">
+        <item>@string/grade_50kg</item>
+        <item>@string/grade_55kg</item>
+        <item>@string/grade_60kg</item>
+        <item>@string/grade_66kg</item>
+        <item>@string/grade_73kg</item>
+        <item>@string/grade_81kg</item>
+        <item>@string/grade_90kg</item>
+        <item>@string/grade_over_90kg</item>
+        <item>@string/grade_other</item>
+    </string-array>
+    <string-array name="man_grade_hs">
+        <item>@string/grade_50kg</item>
+        <item>@string/grade_55kg</item>
+        <item>@string/grade_60kg</item>
+        <item>@string/grade_66kg</item>
+        <item>@string/grade_73kg</item>
+        <item>@string/grade_81kg</item>
+        <item>@string/grade_90kg</item>
+        <item>@string/grade_100kg</item>
+        <item>@string/grade_over_100kg</item>
+        <item>@string/grade_other</item>
+    </string-array>
+    <string-array name="man_grade">
+        <item>@string/grade_60kg</item>
+        <item>@string/grade_66kg</item>
+        <item>@string/grade_73kg</item>
+        <item>@string/grade_81kg</item>
+        <item>@string/grade_90kg</item>
+        <item>@string/grade_100kg</item>
+        <item>@string/grade_over_100kg</item>
+        <item>@string/grade_other</item>
+    </string-array>
+
+    <string name="grade_40kg">40kg級</string>
+    <string name="grade_over_40kg">40kg超級</string>
+    <string name="grade_44kg">44kg級</string>
+    <string name="grade_48kg">48kg級</string>
+    <string name="grade_52kg">52kg級</string>
+    <string name="grade_57kg">57kg級</string>
+    <string name="grade_63kg">63kg級</string>
+    <string name="grade_70kg">70kg級</string>
+    <string name="grade_over_70kg">70kg超級</string>
+    <string name="grade_78kg">78kg級</string>
+    <string name="grade_over_78kg">78kg超級</string>
+    <string-array name="woman_grade_es">
+        <item>@string/grade_40kg</item>
+        <item>@string/grade_over_40kg</item>
+        <item>@string/grade_45kg</item>
+        <item>@string/grade_over_45kg</item>
+        <item>@string/grade_other</item>
+    </string-array>
+    <string-array name="woman_grade_jhs">
+        <item>@string/grade_40kg</item>
+        <item>@string/grade_44kg</item>
+        <item>@string/grade_48kg</item>
+        <item>@string/grade_52kg</item>
+        <item>@string/grade_57kg</item>
+        <item>@string/grade_63kg</item>
+        <item>@string/grade_70kg</item>
+        <item>@string/grade_over_70kg</item>
+        <item>@string/grade_other</item>
+    </string-array>
+    <string-array name="woman_grade_hs">
+        <item>@string/grade_40kg</item>
+        <item>@string/grade_44kg</item>
+        <item>@string/grade_48kg</item>
+        <item>@string/grade_52kg</item>
+        <item>@string/grade_57kg</item>
+        <item>@string/grade_63kg</item>
+        <item>@string/grade_70kg</item>
+        <item>@string/grade_78kg</item>
+        <item>@string/grade_over_78kg</item>
+        <item>@string/grade_other</item>
+    </string-array>
     <string-array name="woman_grade">
-        <item>44kg級</item>
-        <item>48kg級</item>
-        <item>52kg級</item>
-        <item>57kg級</item>
-        <item>63kg級</item>
-        <item>70kg級</item>
-        <item>70kg超級</item>
-        <item>78kg級</item>
-        <item>78kg超級</item>
-        <item>その他</item>
+        <item>@string/grade_48kg</item>
+        <item>@string/grade_52kg</item>
+        <item>@string/grade_57kg</item>
+        <item>@string/grade_63kg</item>
+        <item>@string/grade_70kg</item>
+        <item>@string/grade_78kg</item>
+        <item>@string/grade_over_78kg</item>
+        <item>@string/grade_other</item>
     </string-array>
 
     <!-- Rank -->
+    <string name="rank_title">試合情報</string>
+    <string name="rank_first">1回戦</string>
+    <string name="rank_second">2回戦</string>
+    <string name="rank_third">3回戦</string>
+    <string name="rank_fourth">4回戦</string>
+    <string name="rank_fifth">5回戦</string>
+    <string name="rank_sixth">6回戦</string>
+    <string name="rank_quarterfinals">準々決勝</string>
+    <string name="rank_semifinals">準決勝</string>
+    <string name="rank_final">決勝</string>
     <string-array name="rank">
-        <item>1回戦</item>
-        <item>2回戦</item>
-        <item>3回戦</item>
-        <item>4回戦</item>
-        <item>5回戦</item>
-        <item>6回戦</item>
-        <item>準々決勝</item>
-        <item>準決勝</item>
-        <item>決勝戦</item>
+        <item>@string/rank_first</item>
+        <item>@string/rank_second</item>
+        <item>@string/rank_third</item>
+        <item>@string/rank_fourth</item>
+        <item>@string/rank_fifth</item>
+        <item>@string/rank_sixth</item>
+        <item>@string/rank_quarterfinals</item>
+        <item>@string/rank_semifinals</item>
+        <item>@string/rank_final</item>
     </string-array>
+    <string name="num_start_text_view">第</string>
+    <string name="num_end_text_view">試合</string>
 </resources>
