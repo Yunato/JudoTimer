@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/osaekomi_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/osaekomi_button"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/minus_ippon_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corners_10dp"
+            android:gravity="center"
+            android:text="@string/minus_button"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/ippon_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/ippon_text_view"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/plus_ippon_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corners_10dp"
+            android:gravity="center"
+            android:text="@string/plus_button"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/minus_wazaari_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corners_10dp"
+            android:gravity="center"
+            android:text="@string/minus_button"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/wazaari_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/wazaari_text_view"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/plus_wazaari_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corners_10dp"
+            android:gravity="center"
+            android:text="@string/plus_button"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/minus_shido_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_corners_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/minus_button"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/shido_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/shido_text_view"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/plus_shido_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_corners_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/plus_button"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</LinearLayout>
