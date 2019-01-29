@@ -50,7 +50,7 @@ class InputGameInfoFragment : Fragment() {
                     .findViewById(R.id.second_input_layout)
                     .findViewById(R.id.color_layout)
             val gameNameView = view.findViewById(R.id.input_game_info_layout)
-                    .findViewById(R.id.name_text_input_layout) as TextInputEditText
+                    .findViewById(R.id.name_edit_text) as TextInputEditText
             val selectGenderView = view.findViewById(R.id.input_game_info_layout)
                     .findViewById(R.id.select_gender_text_view) as TextInputEditText
             val selectPartView = view.findViewById(R.id.input_game_info_layout)
@@ -63,16 +63,16 @@ class InputGameInfoFragment : Fragment() {
                     .findViewById(R.id.num_edit_text) as TextInputEditText
             val firstPlayerNameView = view.findViewById(R.id.input_player_info_layout)
                     .findViewById(R.id.first_input_layout)
-                    .findViewById(R.id.name_edit_text) as TextInputEditText
+                    .findViewById(R.id.player_name_edit_text) as TextInputEditText
             val firstPlayerBelongView = view.findViewById(R.id.input_player_info_layout)
                     .findViewById(R.id.first_input_layout)
-                    .findViewById(R.id.belong_text_view) as TextInputEditText
+                    .findViewById(R.id.player_belong_edit_text) as TextInputEditText
             val secondPlayerNameView = view.findViewById(R.id.input_player_info_layout)
-                    .findViewById(R.id.first_input_layout)
-                    .findViewById(R.id.name_edit_text) as TextInputEditText
+                    .findViewById(R.id.second_input_layout)
+                    .findViewById(R.id.player_name_edit_text) as TextInputEditText
             val secondPlayerBelongView = view.findViewById(R.id.input_player_info_layout)
-                    .findViewById(R.id.first_input_layout)
-                    .findViewById(R.id.belong_text_view) as TextInputEditText
+                    .findViewById(R.id.second_input_layout)
+                    .findViewById(R.id.player_belong_edit_text) as TextInputEditText
             val faButton = view.findViewById(R.id.fab) as FloatingActionButton
 
             val switchGradeItems = {

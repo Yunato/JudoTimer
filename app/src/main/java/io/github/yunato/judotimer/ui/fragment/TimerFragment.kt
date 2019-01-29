@@ -12,23 +12,42 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.TextView
 import io.github.yunato.judotimer.R
+import io.github.yunato.judotimer.model.dto.Game
+import io.github.yunato.judotimer.model.dto.Player
 import io.github.yunato.judotimer.model.timer.MyCountDownTimer
 import io.github.yunato.judotimer.ui.view.ResizeTextView
 
 class TimerFragment : Fragment() {
 
     companion object {
+        private val GAME_ARG = "GAME_ARG"
+        private val FIRST_ARG = "FIRST_ARG"
+        private val SECOND_ARG = "SECOND_ARG"
 
-        fun newInstance(): TimerFragment {
-            return TimerFragment()
+        fun newInstance(game: Game, first: Player, second: Player): TimerFragment {
+            val fragment = TimerFragment()
+            val args = Bundle()
+            args.putParcelable(GAME_ARG, game)
+            args.putParcelable(FIRST_ARG, first)
+            args.putParcelable(SECOND_ARG, second)
+            fragment.arguments = args
+            return fragment
         }
     }
 
     private var mListener: OnFragmentInteractionListener? = null
     private var timer: MyCountDownTimer? = null
+    private var game: Game? = null
+    private var first: Player? = null
+    private var second: Player? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (arguments != null) {
+            game = arguments.getParcelable(GAME_ARG)
+            first = arguments.getParcelable(FIRST_ARG)
+            second = arguments.getParcelable(SECOND_ARG)
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -101,6 +120,10 @@ class TimerFragment : Fragment() {
                     ContextCompat.getColor(activity, R.color.colorPlayerWhite))
             firstScoreFirstTextView.text = firstScore.toString()
             secondScoreFirstTextView.text = secondScore.toString()
+            firstNameTextView.text = first?.name
+            firstBelongTextView.text = first?.belongs
+            secondNameTextView.text = second?.name
+            secondBelongTextView.text = second?.belongs
 
             timerTextView.setOnClickListener {
                 timer?.cancel()
@@ -108,6 +131,7 @@ class TimerFragment : Fragment() {
                     timer?.isRunning = false
                     timerTextView.setTextColor(
                             ContextCompat.getColor(activity, R.color.colorPlayerBlue))
+                    stateTextView.text = "待て"
                 } else {
                     timer = MyCountDownTimer(countNumber, interval)
                     timer?.setOnProgressListener(object : MyCountDownTimer.OnProgressListener {
@@ -120,6 +144,7 @@ class TimerFragment : Fragment() {
                     timer?.isRunning = true
                     timerTextView.setTextColor(
                             ContextCompat.getColor(activity, R.color.colorStroke))
+                    stateTextView.text = ""
                 }
             }
             timerTextView.setOnLongClickListener {

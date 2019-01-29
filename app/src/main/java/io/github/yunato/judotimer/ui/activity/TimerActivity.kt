@@ -34,7 +34,7 @@ class TimerActivity : android.support.v7.app.AppCompatActivity(),
         val second:  Player = intent.getParcelableExtra(SECOND_EXTRA)
 
         val transition = fragmentManager.beginTransaction()
-        val fragment = TimerFragment.newInstance()
+        val fragment = TimerFragment.newInstance(game, first, second)
         transition.replace(R.id.activity_timer, fragment).commit()
     }
 
