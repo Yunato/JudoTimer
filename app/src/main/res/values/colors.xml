@@ -6,6 +6,7 @@
     <color name="colorPrimaryLight">#C8E6C9</color>
     <color name="colorAccent">#FFAB00</color>
 
+    <color name="colorStroke">#757575</color>
     <color name="colorPlayerRed">#F44336</color>
     <color name="colorPlayerWhite">#FAFAFA</color>
     <color name="colorPlayerBlue">#3F51B5</color>

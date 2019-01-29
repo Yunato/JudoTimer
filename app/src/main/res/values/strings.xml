@@ -171,4 +171,5 @@
     <string name="ippon_text_view">I</string>
     <string name="wazaari_text_view">W</string>
     <string name="shido_text_view">S</string>
+    <string name="second_of_score">1</string>
 </resources>
