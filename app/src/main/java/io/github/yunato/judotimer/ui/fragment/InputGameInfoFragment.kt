@@ -49,6 +49,8 @@ class InputGameInfoFragment : Fragment() {
             val secondPlayerLayout = view.findViewById(R.id.input_player_info_layout)
                     .findViewById(R.id.second_input_layout)
                     .findViewById(R.id.color_layout)
+            val gameNameView = view.findViewById(R.id.input_game_info_layout)
+                    .findViewById(R.id.name_text_input_layout) as TextInputEditText
             val selectGenderView = view.findViewById(R.id.input_game_info_layout)
                     .findViewById(R.id.select_gender_text_view) as TextInputEditText
             val selectPartView = view.findViewById(R.id.input_game_info_layout)
@@ -57,11 +59,25 @@ class InputGameInfoFragment : Fragment() {
                     .findViewById(R.id.select_grade_text_view) as TextInputEditText
             val selectRankView = view.findViewById(R.id.input_game_info_layout)
                     .findViewById(R.id.select_rank_text_view) as TextInputEditText
+            val numberView = view.findViewById(R.id.input_game_info_layout)
+                    .findViewById(R.id.num_edit_text) as TextInputEditText
+            val firstPlayerNameView = view.findViewById(R.id.input_player_info_layout)
+                    .findViewById(R.id.first_input_layout)
+                    .findViewById(R.id.name_edit_text) as TextInputEditText
+            val firstPlayerBelongView = view.findViewById(R.id.input_player_info_layout)
+                    .findViewById(R.id.first_input_layout)
+                    .findViewById(R.id.belong_text_view) as TextInputEditText
+            val secondPlayerNameView = view.findViewById(R.id.input_player_info_layout)
+                    .findViewById(R.id.first_input_layout)
+                    .findViewById(R.id.name_edit_text) as TextInputEditText
+            val secondPlayerBelongView = view.findViewById(R.id.input_player_info_layout)
+                    .findViewById(R.id.first_input_layout)
+                    .findViewById(R.id.belong_text_view) as TextInputEditText
             val faButton = view.findViewById(R.id.fab) as FloatingActionButton
 
             val switchGradeItems = {
                 val pair = Pair(selectGenderView.text.toString(), selectPartView.text.toString())
-                val resourceId = when(pair){
+                val resourceId = when (pair) {
                     Pair(activity.getString(R.string.gender_man), activity.getString(R.string.part_es)) -> R.array.man_grade_es
                     Pair(activity.getString(R.string.gender_man), activity.getString(R.string.part_jhs)) -> R.array.man_grade_jhs
                     Pair(activity.getString(R.string.gender_man), activity.getString(R.string.part_hs)) -> R.array.man_grade_hs
@@ -72,7 +88,9 @@ class InputGameInfoFragment : Fragment() {
                     Pair(activity.getString(R.string.gender_woman), activity.getString(R.string.part_hs)) -> R.array.woman_grade_hs
                     Pair(activity.getString(R.string.gender_woman), activity.getString(R.string.part_univ)) -> R.array.woman_grade
                     Pair(activity.getString(R.string.gender_woman), activity.getString(R.string.part_general)) -> R.array.woman_grade
-                    else ->{ R.string.grade_other }
+                    else -> {
+                        R.string.grade_other
+                    }
                 }
                 mGradeItems = activity.resources.getStringArray(resourceId)
             }
@@ -87,10 +105,10 @@ class InputGameInfoFragment : Fragment() {
                         .setTitle(activity.getString(R.string.gender_title))
                         .setItems(items, { _, which ->
                             selectGenderView.setText(items[which])
-                            if(!mGenderState.contentEquals(selectGenderView.text)){
+                            if (!mGenderState.contentEquals(selectGenderView.text)) {
                                 mGenderState = selectGenderView.text.toString()
                                 switchGradeItems()
-                                if(!mGradeItems.contains(selectGradeView.text.toString())){
+                                if (!mGradeItems.contains(selectGradeView.text.toString())) {
                                     selectGradeView.setText("")
                                 }
                             }
@@ -104,7 +122,7 @@ class InputGameInfoFragment : Fragment() {
                         .setItems(items, { _, which ->
                             selectPartView.setText(items[which])
                             switchGradeItems()
-                            if(!mGradeItems.contains(selectGradeView.text.toString())){
+                            if (!mGradeItems.contains(selectGradeView.text.toString())) {
                                 selectGradeView.setText("")
                             }
                         })
@@ -130,9 +148,14 @@ class InputGameInfoFragment : Fragment() {
             }
             faButton.setOnClickListener {
                 mListener?.onStart(
-                        Game(0, "", "", "", ""),
-                        Player("", ""),
-                        Player("", ""))
+                        Game(0, gameNameView.text.toString(),
+                                selectGradeView.text.toString(),
+                                selectRankView.text.toString(),
+                                numberView.text.toString()),
+                        Player(firstPlayerNameView.text.toString(),
+                                firstPlayerBelongView.text.toString()),
+                        Player(secondPlayerNameView.text.toString(),
+                                secondPlayerBelongView.text.toString()))
             }
 
             mGenderState = activity.getString(R.string.gender_man)

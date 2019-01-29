@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
         fragment.setOnStartListener(
                 object : InputGameInfoFragment.OnStartListener {
                     override fun onStart(game: Game, first: Player, second: Player) {
-                        TimerActivity.intent(applicationContext).let { startActivity(it) }
+                        TimerActivity.intent(applicationContext, game, first, second)
+                                .let { startActivity(it) }
                     }
                 }
         )
