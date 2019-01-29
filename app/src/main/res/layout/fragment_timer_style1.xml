@@ -1,15 +1,14 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    style="@style/linear_layout_mmv_style"
+    android:baselineAligned="false">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/linear_layout_mmh_style"
         android:layout_weight="10">
 
         <include
+            android:id="@+id/first_input_score"
             layout="@layout/part_input_score"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -17,12 +16,12 @@
 
         <io.github.yunato.judotimer.ui.view.ResizeTextView
             android:id="@+id/timer_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            style="@style/widget_mm_style"
             android:layout_weight="3"
             android:gravity="center"/>
 
         <include
+            android:id="@+id/second_input_score"
             layout="@layout/part_input_score"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -30,181 +29,164 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/linear_layout_mmv_style"
         android:layout_weight="9"
-        android:orientation="vertical">
+        android:baselineAligned="false">
 
         <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="5"
-            android:orientation="horizontal">
+            style="@style/widget_mm_style"
+            android:layout_weight="5">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+                style="@style/linear_layout_mmh_style"
+                android:baselineAligned="false">
 
                 <FrameLayout
+                    android:id="@+id/first_color"
                     style="@style/widget_mm_style"
-                    android:layout_weight="1"
-                    android:background="@color/colorPlayerRed"/>
+                    android:layout_weight="1"/>
 
                 <FrameLayout
+                    android:id="@+id/second_color"
                     style="@style/widget_mm_style"
-                    android:layout_weight="1"
-                    android:background="@color/colorPlayerWhite"/>
+                    android:layout_weight="1"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                style="@style/widget_mm_style">
 
                 <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    style="@style/widget_mm_style"
                     android:layout_weight="1"/>
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/state_text_view"
+                    style="@style/text_view_style"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/shape_rounded_corners_30dp"
-                    android:gravity="center"
-                    android:textSize="24sp"/>
+                    android:gravity="center"/>
 
                 <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    style="@style/widget_mm_style"
                     android:layout_weight="1"/>
             </LinearLayout>
         </FrameLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            style="@style/linear_layout_mmh_style"
             android:layout_weight="1"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
+            android:baselineAligned="false">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                style="@style/linear_layout_mmh_style"
                 android:layout_weight="1"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+                android:baselineAligned="false">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    style="@style/linear_layout_mmv_style"
+                    android:layout_weight="1">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="3"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:id="@+id/first_player_belong_text_view"
+                        style="@style/text_view_style"
                         android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/first_player_name_text_view"
+                        style="@style/text_view_style"
+                        android:layout_weight="3"
+                        android:textSize="28sp"/>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="4"
-                    android:orientation="vertical">
+                    style="@style/linear_layout_mmv_style"
+                    android:layout_weight="4">
 
                     <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:id="@+id/first_three_shido_view"
+                        style="@style/widget_mm_style"
+                        android:layout_weight="1"
+                        android:visibility="invisible"/>
 
                     <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:id="@+id/first_two_shido_view"
+                        style="@style/widget_mm_style"
+                        android:layout_weight="1"
+                        android:visibility="invisible"/>
 
                     <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:id="@+id/first_one_shido_view"
+                        style="@style/widget_mm_style"
+                        android:layout_weight="1"
+                        android:visibility="invisible"/>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                style="@style/linear_layout_mmh_style"
+                android:layout_weight="1">
 
                 <io.github.yunato.judotimer.ui.view.ResizeTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:id="@+id/first_score_text_view"
+                    style="@style/widget_wm_style"
                     android:layout_weight="5"
                     android:gravity="center"/>
 
                 <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    style="@style/widget_wm_style"
                     android:layout_weight="1"/>
 
                 <io.github.yunato.judotimer.ui.view.ResizeTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:id="@+id/second_score_text_view"
+                    style="@style/widget_wm_style"
                     android:layout_weight="5"
                     android:gravity="center"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                style="@style/linear_layout_mmh_style"
                 android:layout_weight="1"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+                android:baselineAligned="false">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="4"
-                    android:orientation="vertical">
+                    style="@style/linear_layout_mmv_style"
+                    android:layout_weight="4">
 
                     <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:id="@+id/second_three_shido_view"
+                        style="@style/widget_mm_style"
+                        android:layout_weight="1"
+                        android:visibility="invisible"/>
 
                     <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:id="@+id/second_two_shido_view"
+                        style="@style/widget_mm_style"
+                        android:layout_weight="1"
+                        android:visibility="invisible"/>
 
                     <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:id="@+id/second_one_shido_view"
+                        style="@style/widget_mm_style"
+                        android:layout_weight="1"
+                        android:visibility="invisible"/>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    style="@style/linear_layout_mmv_style"
+                    android:layout_weight="1">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="3"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:id="@+id/second_player_belong_text_view"
+                        style="@style/text_view_style"
                         android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/second_player_name_text_view"
+                        style="@style/text_view_style"
+                        android:layout_weight="3"
+                        android:textSize="28sp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
