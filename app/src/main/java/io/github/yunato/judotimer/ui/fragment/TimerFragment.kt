@@ -164,6 +164,8 @@ class TimerFragment : Fragment() {
                 if (firstScore < 10) {
                     firstScore += 10
                     firstScoreSecondTextView.visibility = View.VISIBLE
+                    timer?.cancel()
+                    timer?.isRunning = false
                 }
             }
             firstMinusWazaariButton.setOnClickListener {
@@ -182,6 +184,8 @@ class TimerFragment : Fragment() {
                 } else if (second < 1) {
                     firstScore += 10
                     firstScoreSecondTextView.visibility = View.VISIBLE
+                    timer?.cancel()
+                    timer?.isRunning = false
                 }
             }
             firstMinusShidoButton.setOnClickListener {
@@ -203,7 +207,11 @@ class TimerFragment : Fragment() {
                     val CardView: CardView? = when (firstShidoCount) {
                         0 -> firstOneShidoCard
                         1 -> firstTwoShidoCard
-                        2 -> firstThreeShidoCard
+                        2 -> {
+                            timer?.cancel()
+                            timer?.isRunning = false
+                            firstThreeShidoCard
+                        }
                         else -> null
                     }
                     if (CardView != null) {
@@ -222,6 +230,8 @@ class TimerFragment : Fragment() {
                 if (secondScore < 10) {
                     secondScore += 10
                     secondScoreSecondTextView.visibility = View.VISIBLE
+                    timer?.cancel()
+                    timer?.isRunning = false
                 }
             }
             secondMinusWazaariButton.setOnClickListener {
@@ -240,6 +250,8 @@ class TimerFragment : Fragment() {
                 } else if (second < 1) {
                     secondScore += 10
                     secondScoreSecondTextView.visibility = View.VISIBLE
+                    timer?.cancel()
+                    timer?.isRunning = false
                 }
             }
             secondMinusShidoButton.setOnClickListener {
@@ -261,7 +273,11 @@ class TimerFragment : Fragment() {
                     val CardView: CardView? = when (secondShidoCount) {
                         0 -> secondOneShidoCard
                         1 -> secondTwoShidoCard
-                        2 -> secondThreeShidoCard
+                        2 -> {
+                            timer?.cancel()
+                            timer?.isRunning = false
+                            secondThreeShidoCard
+                        }
                         else -> null
                     }
                     if (CardView != null) {

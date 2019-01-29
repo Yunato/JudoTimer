@@ -88,12 +88,12 @@
                     style="@style/linear_layout_mmv_style"
                     android:layout_weight="1">
 
-                    <TextView
+                    <io.github.yunato.judotimer.ui.view.ResizeTextView
                         android:id="@+id/first_player_belong_text_view"
                         style="@style/text_view_style"
                         android:layout_weight="1"/>
 
-                    <TextView
+                    <io.github.yunato.judotimer.ui.view.ResizeTextView
                         android:id="@+id/first_player_name_text_view"
                         style="@style/text_view_style"
                         android:layout_weight="3"
@@ -219,12 +219,12 @@
                     style="@style/linear_layout_mmv_style"
                     android:layout_weight="1">
 
-                    <TextView
+                    <io.github.yunato.judotimer.ui.view.ResizeTextView
                         android:id="@+id/second_player_belong_text_view"
                         style="@style/text_view_style"
                         android:layout_weight="1"/>
 
-                    <TextView
+                    <io.github.yunato.judotimer.ui.view.ResizeTextView
                         android:id="@+id/second_player_name_text_view"
                         style="@style/text_view_style"
                         android:layout_weight="3"
