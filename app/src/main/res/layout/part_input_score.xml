@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:background="@drawable/shape_rounded_corners_30dp"
         android:gravity="center"
         android:text="@string/osaekomi_button"
         android:textSize="20sp"/>
@@ -25,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/shape_rounded_corners_10dp"
+            android:background="@drawable/shape_rounded_corners_30dp"
             android:gravity="center"
             android:text="@string/minus_button"
             android:textSize="20sp"/>
@@ -44,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/shape_rounded_corners_10dp"
+            android:background="@drawable/shape_rounded_corners_30dp"
             android:gravity="center"
             android:text="@string/plus_button"
             android:textSize="20sp"/>
@@ -62,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/shape_rounded_corners_10dp"
+            android:background="@drawable/shape_rounded_corners_30dp"
             android:gravity="center"
             android:text="@string/minus_button"
             android:textSize="20sp"/>
@@ -81,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/shape_rounded_corners_10dp"
+            android:background="@drawable/shape_rounded_corners_30dp"
             android:gravity="center"
             android:text="@string/plus_button"
             android:textSize="20sp"/>
@@ -98,8 +99,8 @@
             android:id="@+id/minus_shido_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_rounded_corners_10dp"
             android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corners_30dp"
             android:gravity="center"
             android:text="@string/minus_button"
             android:textSize="20sp"/>
@@ -117,8 +118,8 @@
             android:id="@+id/plus_shido_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_rounded_corners_10dp"
             android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corners_30dp"
             android:gravity="center"
             android:text="@string/plus_button"
             android:textSize="20sp"/>
