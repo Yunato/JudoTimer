@@ -8,7 +8,7 @@ class MyCountDownTimer(millisUntilFinished: Long, countDownInterval: Long)
         : CountDownTimer(millisUntilFinished, countDownInterval) {
 
     private var mListener: OnProgressListener? = null
-    var isRunning: Boolean = true
+    var isRunning: Boolean = false
 
     private val dataFormat: SimpleDateFormat = SimpleDateFormat("mm:ss", Locale.JAPAN)
 

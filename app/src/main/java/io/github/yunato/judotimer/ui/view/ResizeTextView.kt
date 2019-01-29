@@ -7,6 +7,7 @@ import android.util.TypedValue
 import android.widget.TextView
 
 class ResizeTextView : TextView {
+    var mTextSize: Float = textSize
 
     constructor(context: Context?) : super(context)
 
@@ -22,17 +23,16 @@ class ResizeTextView : TextView {
         resize()
     }
 
-    private fun resize(){
+    private fun resize() {
         val MIN_TEXT_SIZE = 10f
         val viewRectAngle = RectAngle(height.toFloat(), width.toFloat())
-        var mTextSize: Float = textSize
 
-        while (viewRectAngle.isInclude(getTextRectAngle(mTextSize))){
+        while (viewRectAngle.isInclude(getTextRectAngle(mTextSize))) {
             mTextSize += 1f
         }
 
-        while (viewRectAngle.isShorter(getTextRectAngle(mTextSize))){
-            if (MIN_TEXT_SIZE >= mTextSize){
+        while (viewRectAngle.isShorter(getTextRectAngle(mTextSize))) {
+            if (MIN_TEXT_SIZE >= mTextSize) {
                 mTextSize = MIN_TEXT_SIZE
                 break
             }
@@ -41,7 +41,7 @@ class ResizeTextView : TextView {
         setTextSize(TypedValue.COMPLEX_UNIT_PX, mTextSize)
     }
 
-    private fun getTextRectAngle(mTextSize: Float) : RectAngle{
+    private fun getTextRectAngle(mTextSize: Float): RectAngle {
         val paint = Paint()
         paint.textSize = mTextSize
         val fm = paint.fontMetrics
@@ -50,8 +50,7 @@ class ResizeTextView : TextView {
                 paint.measureText(text.toString()))
     }
 
-    class RectAngle(val height: Float, val width: Float){
-
+    class RectAngle(val height: Float, val width: Float) {
         val isShorter: (RectAngle) -> Boolean = fun(rectAngle: RectAngle) =
                 height < rectAngle.height || width < rectAngle.width
 
