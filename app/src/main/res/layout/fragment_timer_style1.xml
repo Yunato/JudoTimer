@@ -91,12 +91,14 @@
                     <io.github.yunato.judotimer.ui.view.ResizeTextView
                         android:id="@+id/first_player_belong_text_view"
                         style="@style/text_view_style"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:gravity="center"/>
 
                     <io.github.yunato.judotimer.ui.view.ResizeTextView
                         android:id="@+id/first_player_name_text_view"
                         style="@style/text_view_style"
                         android:layout_weight="3"
+                        android:gravity="center"
                         android:textSize="28sp"/>
                 </LinearLayout>
 
@@ -222,12 +224,14 @@
                     <io.github.yunato.judotimer.ui.view.ResizeTextView
                         android:id="@+id/second_player_belong_text_view"
                         style="@style/text_view_style"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:gravity="center"/>
 
                     <io.github.yunato.judotimer.ui.view.ResizeTextView
                         android:id="@+id/second_player_name_text_view"
                         style="@style/text_view_style"
                         android:layout_weight="3"
+                        android:gravity="center"
                         android:textSize="28sp"/>
                 </LinearLayout>
             </LinearLayout>
