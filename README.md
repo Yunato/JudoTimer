@@ -1,2 +1,2 @@
 # JudoTimer
-柔道の試合用タイマー Androidアプリケーション
+Judo match timer for Android application
